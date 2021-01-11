@@ -2,6 +2,8 @@
 
 #include "Core.h"
 
+#include "Events/ApplicationEvent.h"
+
 namespace Wolff {
 	class WOLFF_API Application
 	{

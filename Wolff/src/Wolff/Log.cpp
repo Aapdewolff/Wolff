@@ -1,5 +1,7 @@
 #include "Log.h"
 
+#include "spdlog/sinks/stdout_color_sinks.h"
+
 namespace Wolff {
 	std::shared_ptr < spdlog::logger> Log::coreLogger;
 	std::shared_ptr < spdlog::logger> Log::clientLogger;

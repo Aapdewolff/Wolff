@@ -4,6 +4,9 @@
     <Filter Include="Wolff">
       <UniqueIdentifier>{030B640E-6F1F-8CBF-38A1-2F1FA47488F0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Wolff\Events">
+      <UniqueIdentifier>{87D544DA-7338-D47E-1CBE-0C350800A001}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Wolff.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Wolff\EntryPoint.h">
       <Filter>Wolff</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolff\Events\ApplicationEvent.h">
+      <Filter>Wolff\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolff\Events\Event.h">
+      <Filter>Wolff\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolff\Events\KeyEvent.h">
+      <Filter>Wolff\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolff\Events\MouseEvent.h">
+      <Filter>Wolff\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Wolff\Log.h">
       <Filter>Wolff</Filter>
