@@ -1,3 +1,6 @@
 [submodule "Wolff/vendor/spdlog"]
 	path = Wolff/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Wolff/vendor/GLFW"]
+	path = Wolff/vendor/GLFW
+	url = https://github.com/glfw/glfw

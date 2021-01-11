@@ -7,6 +7,12 @@
     <Filter Include="Wolff\Events">
       <UniqueIdentifier>{87D544DA-7338-D47E-1CBE-0C350800A001}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Wolff\Platforms">
+      <UniqueIdentifier>{0AB2B9F8-763D-27BD-7F4E-AAB1EB5883BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wolff\Platforms\Windows">
+      <UniqueIdentifier>{44C6353B-B0FD-7DD2-B907-E2F525BEA4CB}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Wolff.h" />
@@ -34,6 +40,13 @@
     <ClInclude Include="src\Wolff\Log.h">
       <Filter>Wolff</Filter>
     </ClInclude>
+    <ClInclude Include="src\Wolff\Platforms\Windows\WindowsWindow.h">
+      <Filter>Wolff\Platforms\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolff\Window.h">
+      <Filter>Wolff</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolffpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Wolff\Application.cpp">
@@ -42,5 +55,9 @@
     <ClCompile Include="src\Wolff\Log.cpp">
       <Filter>Wolff</Filter>
     </ClCompile>
+    <ClCompile Include="src\Wolff\Platforms\Windows\WindowsWindow.cpp">
+      <Filter>Wolff\Platforms\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wolffpch.cpp" />
   </ItemGroup>
 </Project>

@@ -1,9 +1,7 @@
 #pragma once
 
+#include "Wolffpch.h"
 #include "Wolff/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Wolff {
 	enum class EventType

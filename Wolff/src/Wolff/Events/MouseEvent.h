@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Wolff {
 
 	class WOLFF_API MouseMovedEvent : public Event

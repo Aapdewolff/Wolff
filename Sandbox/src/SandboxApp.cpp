@@ -8,10 +8,7 @@ public:
 		WOLFF_CLIENT_INFO("hi there");
 	}
 
-	~Sandbox()
-	{
-
-	}
+	~Sandbox() { }
 };
 
 Wolff::Application* Wolff::CreateApplication()
