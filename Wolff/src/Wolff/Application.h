@@ -3,7 +3,7 @@
 #include "Core.h"
 
 namespace Wolff {
-	class HAZEL_API Application
+	class WOLFF_API Application
 	{
 	public:
 		Application();

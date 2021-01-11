@@ -1,0 +1,3 @@
+[submodule "Wolff/vendor/spdlog"]
+	path = Wolff/vendor/spdlog
+	url = https://github.com/gabime/spdlog
