@@ -8,19 +8,19 @@
 namespace Wolff {
 	struct WindowProps
 	{
-		std::string Title;
-		unsigned int Width;
-		unsigned int Height;
+		std::string title;
+		unsigned int width;
+		unsigned int height;
 
 		WindowProps(const std::string& title = "Wolff Engine", unsigned int width = 1280, unsigned int height = 720)
-			: Title(title), Width(width), Height(height) { }
+			: title(title), width(width), height(height) { }
 	};
 
 	// Interface representing a desktop system based Window
 	class WOLFF_API Window
 	{
 	public:
-		using EventCallbackFn = std::function<void(Event&)>;
+		using EventCallbackFunction = std::function<void(Event&)>;
 
 		virtual ~Window() { }
 
@@ -30,7 +30,7 @@ namespace Wolff {
 		virtual unsigned int GetHeight() const = 0;
 
 		// Window attributes
-		virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
+		virtual void SetEventCallback(const EventCallbackFunction& callback) = 0;
 		virtual void SetVSync(bool enabled) = 0;
 		virtual bool IsVSync() const = 0;
 

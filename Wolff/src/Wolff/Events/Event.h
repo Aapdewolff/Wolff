@@ -42,32 +42,30 @@ namespace Wolff {
 		{
 			return GetCategoryFlags() & category;
 		}
-	protected:
-		bool m_Handled = false;
+
+		bool handled = false;
 	};
 
 	class EventDispatcher
 	{
 		template<typename T>
-		using EventFn = std::function<bool(T&)>;
+		using EventFunction = std::function<bool(T&)>;
 	public:
 		EventDispatcher(Event& event)
-			: m_Event(event)
-		{
-		}
+			: event(event) { }
 
 		template<typename T>
-		bool Dispatch(EventFn<T> func)
+		bool Dispatch(EventFunction<T> func)
 		{
-			if (m_Event.GetEventType() == T::GetStaticType())
+			if (event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)&m_Event);
+				event.handled = func(*(T*)&event);
 				return true;
 			}
 			return false;
 		}
 	private:
-		Event& m_Event;
+		Event& event;
 	};
 
 	inline std::ostream& operator<<(std::ostream& os, const Event& e)

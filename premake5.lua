@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Wolff/vendor/GLFW/include"
+IncludeDir["GLAD"] = "Wolff/vendor/GLAD/include"
 
 include "Wolff/vendor/GLFW"
+include "Wolff/vendor/GLAD"
 
 project "Wolff"
 	location "Wolff"
@@ -37,12 +39,14 @@ project "Wolff"
 	{
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.GLAD}"
 	}
 
 	links
 	{
 		"GLFW",
+		"GLAD",
 		"opengl32.lib"
 	}
 
@@ -54,7 +58,8 @@ project "Wolff"
 		defines
 		{
 			"WOLFF_PLATFORM_WINDOWS",
-			"WOLFF_BUILD_DLL"
+			"WOLFF_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -64,14 +69,17 @@ project "Wolff"
 
 	filter "configurations:Debug"
 		defines { "WOLFF_DEBUG", "WOLFF_ENABLE_ASSERTS" }
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "WOLFF_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Distribution"
 		defines "WOLFF_DISTRIBUTION"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -111,12 +119,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "WOLFF_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "WOLFF_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Distribution"
 		defines "WOLFF_DISTRIBUTION"
+		buildoptions "/MD"
 		optimize "On"

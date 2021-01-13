@@ -37,6 +37,12 @@
     <ClInclude Include="src\Wolff\Events\MouseEvent.h">
       <Filter>Wolff\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Wolff\Layer.h">
+      <Filter>Wolff</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolff\LayerStack.h">
+      <Filter>Wolff</Filter>
+    </ClInclude>
     <ClInclude Include="src\Wolff\Log.h">
       <Filter>Wolff</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Wolff\Application.cpp">
+      <Filter>Wolff</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wolff\Layer.cpp">
+      <Filter>Wolff</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wolff\LayerStack.cpp">
       <Filter>Wolff</Filter>
     </ClCompile>
     <ClCompile Include="src\Wolff\Log.cpp">
